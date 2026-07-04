@@ -1,0 +1,33 @@
+# robots.txt - SOS iPhone
+# https://sosiphonepoa.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sosiphonepoa.com.br/sitemap.xml
+
+# Block admin pages (if any)
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Social media crawlers
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
