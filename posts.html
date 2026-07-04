@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS iPhone — Templates Instagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0F172A;
+            --bg-surface: #1E293B;
+            --bg-elevated: #273549;
+            --border: #334155;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --red: #EF4444;
+            --red-glow: rgba(239, 68, 68, 0.25);
+            --amber: #F59E0B;
+            --amber-glow: rgba(245, 158, 11, 0.25);
+            --green: #10B981;
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'Source Sans 3', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: #1a1a2e;
+            padding: 40px 20px;
+            color: var(--text);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-family: var(--font-display);
+            letter-spacing: 2px;
+            color: var(--red);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .post-wrapper {
+            text-align: center;
+        }
+
+        .post-wrapper h3 {
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Instagram Post Base */
+        .post {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1/1;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        /* Post 1: Promoção */
+        .post-promo {
+            background: linear-gradient(135deg, var(--bg) 0%, rgba(239, 68, 68, 0.2) 100%);
+            padding: 32px;
+        }
+
+        .post-promo .badge {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background: var(--red);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-promo .phone-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            font-size: 80px;
+            opacity: 0.2;
+        }
+
+        .post-promo .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .post-promo h2 {
+            font-family: var(--font-display);
+            font-size: 36px;
+            line-height: 1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .post-promo h2 span {
+            color: var(--red);
+        }
+
+        .post-promo p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .post-promo .cta {
+            display: inline-block;
+            background: var(--amber);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .post-promo .logo {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-family: var(--font-display);
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .post-promo .logo em {
+            font-style: normal;
+            color: var(--red);
+        }
+
+        /* Post 2: Serviço */
+        .post-service {
+            background: var(--bg-surface);
+            padding: 32px;
+            text-align: center;
+        }
+
+        .post-service .icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .post-service h2 {
+            font-family: var(--font-display);
+            font-size: 32px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .post-service p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .post-service .price {
+            font-family: var(--font-display);
+            font-size: 48px;
+            color: var(--amber);
+            margin-bottom: 4px;
+        }
+
+        .post-service .price-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .post-service .features {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .post-service .features li {
+            font-size: 13px;
+            color: var(--text-muted);
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .post-service .features li::before {
+            content: '✓';
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .post-service .cta {
+            display: block;
+            background: var(--amber);
+            color: #000;
+            padding: 14px 24px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Post 3: Depoimento */
+        .post-testimonial {
+            background: linear-gradient(180deg, var(--bg) 0%, var(--bg-surface) 100%);
+            padding: 32px;
+        }
+
+        .post-testimonial .quote-icon {
+            font-size: 48px;
+            color: var(--red);
+            opacity: 0.3;
+            margin-bottom: 16px;
+        }
+
+        .post-testimonial .stars {
+            color: var(--amber);
+            font-size: 20px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .post-testimonial .quote {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-style: italic;
+            color: var(--text);
+        }
+
+        .post-testimonial .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .post-testimonial .avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: white;
+        }
+
+        .post-testimonial .author-info strong {
+            display: block;
+            font-size: 15px;
+        }
+
+        .post-testimonial .author-info span {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Post 4: Dica */
+        .post-tip {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, var(--bg) 100%);
+            padding: 32px;
+        }
+
+        .post-tip .tag {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--red);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .post-tip h2 {
+            font-family: var(--font-display);
+            font-size: 28px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .post-tip .tip-list {
+            margin-bottom: 24px;
+        }
+
+        .post-tip .tip-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .post-tip .tip-num {
+            width: 24px;
+            height: 24px;
+            background: var(--red);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .post-tip .tip-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .post-tip .footer-text {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Post 5: Antes/Depois */
+        .post-before-after {
+            background: var(--bg);
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+
+        .post-before-after .compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+        }
+
+        .post-before-after .side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .post-before-after .before {
+            background: rgba(239, 68, 68, 0.1);
+            border-right: 2px solid var(--border);
+        }
+
+        .post-before-after .after {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .post-before-after .side-label {
+            font-family: var(--font-display);
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .post-before-after .before .side-label { color: var(--red); }
+        .post-before-after .after .side-label { color: var(--green); }
+
+        .post-before-after .phone-visual {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .post-before-after .side-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .post-before-after .bottom {
+            background: var(--bg-surface);
+            padding: 20px 24px;
+            text-align: center;
+        }
+
+        .post-before-after .bottom h3 {
+            font-family: var(--font-display);
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .post-before-after .bottom p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Post 6: Urgência */
+        .post-urgency {
+            background: linear-gradient(135deg, var(--red) 0%, #b91c1c 100%);
+            padding: 32px;
+            text-align: center;
+        }
+
+        .post-urgency .pulse-dot {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 16px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+
+        .post-urgency h2 {
+            font-family: var(--font-display);
+            font-size: 36px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .post-urgency p {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .post-urgency .cta {
+            display: inline-block;
+            background: var(--amber);
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .post-urgency .logo-footer {
+            margin-top: 24px;
+            font-family: var(--font-display);
+            font-size: 16px;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+
+        .post-urgency .logo-footer em {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 SOS iPhone — Templates Instagram</h1>
+
+    <div class="grid">
+        <!-- Post 1: Promoção -->
+        <div class="post-wrapper">
+            <h3>Post Promoção</h3>
+            <div class="post post-promo">
+                <div class="logo">SOS <em>iPhone</em></div>
+                <div class="badge">⚡ Oferta Relâmpago</div>
+                <div class="phone-icon">📱</div>
+                <div class="content">
+                    <h2>Tela Quebrada?<br><span>Resolve Hoje!</span></h2>
+                    <p>Vamos até você e trocamos na hora. Garantia de 90 dias.</p>
+                    <span class="cta">📱 Chamar no WhatsApp</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 2: Serviço -->
+        <div class="post-wrapper">
+            <h3>Destaque Serviço</h3>
+            <div class="post post-service">
+                <div class="icon">🔋</div>
+                <h2>Troca de Bateria</h2>
+                <p>Bateria nova com autonomia de fábrica. Instalação no local em 20 minutos.</p>
+                <div class="price">R$ 129</div>
+                <div class="price-note">a partir de · modelo define preço</div>
+                <ul class="features">
+                    <li>Bateria de alta qualidade</li>
+                    <li>Garantia de 180 dias</li>
+                    <li>Sem taxa de deslocamento</li>
+                </ul>
+                <span class="cta">⚡ Agendar Agora</span>
+            </div>
+        </div>
+
+        <!-- Post 3: Depoimento -->
+        <div class="post-wrapper">
+            <h3>Depoimento</h3>
+            <div class="post post-testimonial">
+                <div class="quote-icon">❝</div>
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Bateria durava só 3 horas. Trocaram em 20 minutos na minha casa. Preço justo e serviço impecável."</p>
+                <div class="author">
+                    <div class="avatar">RS</div>
+                    <div class="author-info">
+                        <strong>Rafael Santos</strong>
+                        <span>iPhone 13</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 4: Dica -->
+        <div class="post-wrapper">
+            <h3>Dica / Educational</h3>
+            <div class="post post-tip">
+                <div class="tag">🔋 Dica Rápida</div>
+                <h2>3 Sinais de que sua Bateria Precisa de Troca</h2>
+                <div class="tip-list">
+                    <div class="tip-item">
+                        <div class="tip-num">1</div>
+                        <div class="tip-text">iPhone desliga com mais de 20% de carga</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-num">2</div>
+                        <div class="tip-text">Demora muito para carregar ou não carrega</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-num">3</div>
+                        <div class="tip-text">Bateria incha e empurra a tela</div>
+                    </div>
+                </div>
+                <p class="footer-text">📍 Vamos até você · Porto Alegre/RS</p>
+            </div>
+        </div>
+
+        <!-- Post 5: Antes/Depois -->
+        <div class="post-wrapper">
+            <h3>Antes / Depois</h3>
+            <div class="post post-before-after">
+                <div class="compare">
+                    <div class="side before">
+                        <div class="side-label">Antes</div>
+                        <div class="phone-visual">💔</div>
+                        <div class="side-text">Tela trincada<br>Sem toque</div>
+                    </div>
+                    <div class="side after">
+                        <div class="side-label">Depois</div>
+                        <div class="phone-visual">✨</div>
+                        <div class="side-text">Tela nova<br>100% funcionando</div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <h3>Resultado Garantido</h3>
+                    <p>SOS iPhone · Vamos até você</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 6: Urgência -->
+        <div class="post-wrapper">
+            <h3>Urgência / CTA</h3>
+            <div class="post post-urgency">
+                <div class="pulse-dot"></div>
+                <h2>Emergência?<br>Chama o SOS!</h2>
+                <p>Vagas limitadas para hoje. Atendimento no mesmo dia.</p>
+                <span class="cta">📱 Chamar no WhatsApp</span>
+                <div class="logo-footer">SOS <em>iPhone</em> · Grande SP</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
