@@ -2224,6 +2224,189 @@ ul { list-style: none; }
   }
 }
 
+/* Google Reviews Badge */
+.google-reviews-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding: 16px 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.google-reviews-badge img {
+  width: 24px;
+  height: 24px;
+}
+
+.google-reviews-badge span {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.google-reviews-badge a {
+  font-size: 14px;
+  color: var(--red);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.google-reviews-badge a:hover {
+  color: var(--red-hover);
+}
+
+/* Pain Section */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.pain-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.pain-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+}
+
+.pain-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.pain-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.pain-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.pain-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* Pain mobile */
+@media (max-width: 640px) {
+  .pain-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .pain-card:hover {
+    transform: none;
+  }
+  
+  .pain-card {
+    padding: 24px;
+  }
+  
+  .pain-icon {
+    font-size: 40px;
+  }
+  
+  .pain-card h3 {
+    font-size: 18px;
+  }
+  
+  .pain-card p {
+    font-size: 14px;
+  }
+}
+
+/* CTA Final Section */
+.cta-final {
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-raised) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 64px 48px;
+  text-align: center;
+  margin: 48px 0;
+}
+
+.cta-final-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.cta-final-sub {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-final-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-final-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 16px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.cta-final-secondary:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* CTA Final mobile */
+@media (max-width: 640px) {
+  .cta-final {
+    padding: 48px 24px;
+  }
+  
+  .cta-final-title {
+    font-size: 28px;
+  }
+  
+  .cta-final-sub {
+    font-size: 16px;
+  }
+  
+  .cta-final-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* ═══════════════════════════════════════════════════
    Video Section
    ═══════════════════════════════════════════════════ */
