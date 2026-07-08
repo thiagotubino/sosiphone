@@ -94,7 +94,7 @@
         requestAnimationFrame(() => {
           if (window.scrollY > 50) {
             nav.style.background = 'rgba(8, 8, 12, 0.95)';
-            nav.style.borderBottomColor = 'rgba(255, 45, 45, 0.1)';
+            nav.style.borderBottomColor = 'rgba(212, 175, 55, 0.1)';
           } else {
             nav.style.background = 'rgba(8, 8, 12, 0.85)';
             nav.style.borderBottomColor = 'var(--border)';
@@ -115,7 +115,7 @@
         requestAnimationFrame(() => {
           const x = (e.clientX / window.innerWidth) * 100;
           const y = (e.clientY / window.innerHeight) * 100;
-          heroGlow.style.background = `radial-gradient(ellipse at ${x}% ${y}%, rgba(255, 45, 45, 0.12) 0%, transparent 50%)`;
+          heroGlow.style.background = `radial-gradient(ellipse at ${x}% ${y}%, rgba(212, 175, 55, 0.12) 0%, transparent 50%)`;
           glowTicking = false;
         });
         glowTicking = true;
@@ -195,5 +195,29 @@
       setTimeout(() => ripple.remove(), 600);
     });
   });
+
+  // Accordion Comparison
+  window.toggleAccordion = function(item) {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  };
+
+  // Toggle Comparison
+  window.showAfter = function() {
+    document.getElementById('cardAfter').classList.remove('hidden');
+    document.getElementById('cardBefore').classList.add('hidden');
+    document.getElementById('toggleSlider').className = 'toggle-slider after';
+    document.getElementById('optAfter').className = 'toggle-option after-active';
+    document.getElementById('optBefore').className = 'toggle-option';
+  };
+
+  window.showBefore = function() {
+    document.getElementById('cardAfter').classList.add('hidden');
+    document.getElementById('cardBefore').classList.remove('hidden');
+    document.getElementById('toggleSlider').className = 'toggle-slider before';
+    document.getElementById('optAfter').className = 'toggle-option';
+    document.getElementById('optBefore').className = 'toggle-option before-active';
+  };
 
 })();
