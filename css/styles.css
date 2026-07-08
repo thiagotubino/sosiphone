@@ -162,8 +162,33 @@ ul { list-style: none; }
   display: none;
 }
 
+.nav-social {
+  display: none;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.nav-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.nav-social-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
 @media (min-width: 768px) {
   .nav-links {
+    display: flex;
+  }
+  .nav-social {
     display: flex;
   }
   .nav-cta-mobile {
