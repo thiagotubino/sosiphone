@@ -353,6 +353,89 @@ ul { list-style: none; }
   z-index: 2;
 }
 
+/* Hero Logo */
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.hero-logo-icon {
+  font-size: 32px;
+}
+
+.hero-logo-text {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.hero-logo-text span {
+  color: var(--red);
+}
+
+/* Hero Differentials */
+.hero-differentials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.diff-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.diff-divider {
+  color: var(--text-muted);
+}
+
+/* Hero Prices */
+.hero-prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg) var(--space-xl);
+  background: rgba(255, 45, 45, 0.05);
+  border: 1px solid rgba(255, 45, 45, 0.15);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.price-item {
+  text-align: center;
+}
+
+.price-label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.price-value {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.price-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+}
+
 .hero-badge {
   display: inline-block;
   background: rgba(255, 45, 45, 0.08);
